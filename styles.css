@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    }
+
+header {
+    background-color: #ee3232;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.banner img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cta h2 {
+    font-size: 24px;
+}
+
+.cta p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 10px;
+    }
+
+    .cta {
+        margin-top: 10px;
+    }
+
+    input[type="email"] {
+        width: 80%;
+        margin-right: 0;
+    }
+
+    .features-dropdown {
+        width: 150%;
+        padding: 50px;
+        border: 20px solid #ccc;
+        border-radius: 50px;
+        background-color: #f8f8f8;
+        font-size: 100px;
+        margin-top: 80px;
+        box-sizing: border-box;
+    }
+    .features-dropdown:hover {
+        background-color: #3078c4;
+    }
+    .features-dropdown-toggle {
+        padding: 32px;
+        background-color: #4CAF50;
+        color: white;
+        border: 10px solid #ccc;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    .features-dropdown-toggle:hover {
+        background-color: #45a049;
+    }
+    .login-button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .product img:hover {
+        opacity: 0.8; 
+        transition: opacity 0.3s ease-in-out; 
+    }
+    
+        
+}
+
+
+
+

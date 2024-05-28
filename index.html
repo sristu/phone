@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Advertising</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    
+    #products-container {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .product {
+        display: inline-block;
+        width: 300px; 
+        margin-right: 20px; 
+    }
+    .product img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .login-button {
+        margin-top: 20px;
+        margin-left: 700px;    
+    }
+    .home-button {
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #040404;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+   .home-button:hover {
+    background-color: #45a049;
+   }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to ONEPLUS store</h1>
+</header>
+
+<main>
+    <section class="banner">
+        <img src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2020/03/OnePlus-Logo_new_1.jpg" alt="Advertisement Image" style="width:100px;height:100px;">
+    </section>
+
+    <section id="products-container">
+        <div id="products"></div>
+    </section>
+    
+    
+    <section class="cta">
+        <h2>    Unlock Exclusive Offers Now!</h2>
+        <p>Sign up to our newsletter and get access to exclusive deals</p>
+       
+    </section>
+    
+    <button class="login-button" onclick="window.location.href = 'login.html';">Sign up</button>
+    <button class="home-button" onclick="window.location.href = 'mc.html';">Home</button>
+</main>
+
+<footer>
+    <p>&copy; 2024 Mobile Ad Company. All rights reserved.</p>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const productsContainer = document.getElementById('products');
+
+        const products = [
+            { 
+                name: 'ONEPLUS 12R',  
+                price: '36,999/-', 
+                imageUrl: 'https://suprememobiles.in/cdn/shop/files/2_ca27717c-0819-450d-80c9-a1cc2daa4437.png?v=1712751131&width=1100/260x350',
+                features: ['Features', '6.8 inch Amoled ', '80W supervooc','5,500 mAh']
+            },
+            { 
+                name: 'ONEPLUS 9R', 
+                price: '29,990/-', 
+                imageUrl: 'https://mobilegoo.shop/cdn/shop/files/Untitleddesign-2023-04-26T182019.991.png?v=1691663232',
+                features: ['Features', '6.6 inch Amoled','65W supervooc','4,500 mAh']
+            },
+            { 
+                name: 'ONEPLUS 9 PRO',  
+                price: '41,990/-', 
+                imageUrl: 'https://mobilegoo.shop/cdn/shop/files/Untitleddesign-2023-04-26T185526.837.png?v=1682515532&width=1080/300x550',
+                features: ['Features', '6.7 inch Amoled', '65W supervooc', '4,500 mAh']
+            },
+            { 
+                name: 'ONEPLUS 11R',  
+                price: '30,126/-', 
+                imageUrl: 'https://oasis.opstatics.com/content/dam/oasis/page/2023/in/product/11r/11r-red.png',
+                features: ['Features', '6.7 inch Amoled', '66W supervooc', '5,000 mAh']
+            },
+            { 
+                name: 'ONEPLUS 11 5G',  
+                price: '59,269/-', 
+                imageUrl: 'https://oasis.opstatics.com/content/dam/oasis/page/2023/na/oneplus-11/specs/black-img1.png',
+                features: ['Features', '6.7 inch Amoled', '100W supervooc', '5,000 mAh']
+            },
+            { 
+                name: 'ONEPLUS 12',  
+                price: '58,900/-', 
+                imageUrl: 'https://suprememobiles.in/cdn/shop/files/1_43b9e572-0b96-40f9-bb24-42208f994a01.png?v=1706173005',
+                features: ['Features', '6.8 inch Amoled', '100W supervooc', '5,400 mAh']
+            },
+        ];
+
+
+        products.forEach(product => {
+            const productDiv = document.createElement('div');
+            productDiv.classList.add('product');
+
+            const productImg = document.createElement('img');
+            productImg.src = product.imageUrl;
+            productImg.alt = product.name;
+
+            const productName = document.createElement('h2');
+            productName.textContent = product.name;
+
+            const productDescription = document.createElement('p');
+            productDescription.textContent = product.description;
+
+            const productPrice = document.createElement('span');
+            productPrice.classList.add('price');
+            productPrice.textContent = product.price;
+
+            const featuresDropdown = document.createElement('select');
+            product.features.forEach(feature => {
+                const option = document.createElement('option');
+                option.text = feature;
+                featuresDropdown.add(option);
+            });
+
+            productDiv.appendChild(productImg);
+            productDiv.appendChild(productName);
+            productDiv.appendChild(productDescription);
+            productDiv.appendChild(productPrice);
+            productDiv.appendChild(featuresDropdown);
+
+            productsContainer.appendChild(productDiv);
+        });
+    });
+</script>
+
+</body>
+</html>
